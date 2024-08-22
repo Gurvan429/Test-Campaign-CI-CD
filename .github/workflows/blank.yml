@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  campaigns_run_job:
+    runs-on: ubuntu-latest
+    environment: Test campaign run action
+    name: Test campaign run action
+    steps:
+      - name: Campaigns run
+        id: campaigns_run
+        uses: gurvan429/Test-Campaign-CI-CD@1.0
+        with:
+          email: ${{ secrets.EMAIL }}
+          password: ${{ secrets.PASSWORD }}
+          campaign_ids: ${{ vars.CAMPAIGN_IDS }}
