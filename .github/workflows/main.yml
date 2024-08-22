@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Campaigns run
         id: campaigns_run
-        uses: gurvan429/Test-Campaign-CI-CD@1.0.2
+        uses: gurvan429/Test-Campaign-CI-CD@1.0.3
         with:
           email: ${{ secrets.EMAIL }}
           password: ${{ secrets.PASSWORD }}
